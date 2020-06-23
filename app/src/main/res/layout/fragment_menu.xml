@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/userImageMenu"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_person_menu_24dp"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/userLoginMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userImageMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/userEmailMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userImageMenu"
+                app:layout_constraintTop_toBottomOf="@id/userLoginMenu"
+                app:layout_constraintVertical_bias="0.13" />
+
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="125dp"
+                android:layout_height="28dp"
+                app:backgroundColor="@android:color/white"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userImageMenu"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailMenu"
+                app:shadowColor="@color/colorPrimary"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/editUserBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Редактировать профиль"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/userCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleCountAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Всего автомобилей" />
+
+            <TextView
+                android:id="@+id/countAuto"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:textCursorDrawable="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleAllExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Всего расходов" />
+
+            <TextView
+                android:id="@+id/allExpense"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:textCursorDrawable="@android:color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/userInfo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/titleUserControl"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/userControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Управление пользователями"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/autoListMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Мои автомобили"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/allExpenseMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Расходы по автомобилям"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/allExpenseMenuCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Расходы по категориям"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/allBuildMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Технические работы"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/recognizeAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Распознать автомобиль"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/shadowCategoryList"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/categoryListMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Категории расходов"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/shadowCategoryWorkList"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/categoryWorkListMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Категории технических работ"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

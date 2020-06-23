@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddBuildActivity">
+
+    <include
+        layout="@layout/my_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/titleNameTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Название" />
+
+                <EditText
+                    android:id="@+id/getTitleNameTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textCursorDrawable="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/titleCommentsTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Описание" />
+
+                <EditText
+                    android:id="@+id/getTitleCommentsTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textCursorDrawable="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/getTitleYearTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:gravity="center"
+                    android:text="Выберите дату" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/getListWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Выберите работы"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notifyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:id="@+id/textDateTimeNotify"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="Дата и время уведомления (автоматически за 3 дня)"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notifyDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/getDateTimeNotify"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:gravity="center"
+                    android:text="Выберите дату уведомления" />
+            </LinearLayout>
+
+            <com.loopeer.shadow.ShadowView
+                android:id="@+id/shadowSaveBtn"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/saveBuildBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Сохранить"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

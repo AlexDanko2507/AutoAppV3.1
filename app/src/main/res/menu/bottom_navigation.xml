@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_auto"
+        android:icon="@drawable/ic_directions_car_black_24dp"
+        android:title="Автомобиль"/>
+    <item
+        android:id="@+id/nav_build"
+        android:icon="@drawable/ic_build_black_24dp"
+        android:title="Осблуживание"/>
+    <item
+        android:id="@+id/nav_money"
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:title="Финансы" />
+<!--    <item-->
+<!--        android:id="@+id/nav_map"-->
+<!--        android:icon="@drawable/ic_place_black_24dp"-->
+<!--        android:title="Map"/>-->
+    <item
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_menu_black_24dp"
+        android:title="Меню"/>
+
+</menu>

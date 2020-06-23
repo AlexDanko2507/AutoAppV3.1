@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EditUserControlActivity">
+
+    <include
+        layout="@layout/my_toolbar"
+        android:id="@+id/toolbar"/>
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/titleUsernameControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Имя пользователя" />
+
+    <EditText
+        android:id="@+id/getTitleUsernameControl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:textCursorDrawable="@android:color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/titleEmailControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/getTitleEmailControl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:textCursorDrawable="@android:color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:layout_below="@id/line2">
+
+        <TextView
+            android:id="@+id/getTitleRoleControl"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:gravity="center"
+            android:text="Выберите роль пользователя" />
+    </LinearLayout>
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:shadowMargin="5dp"
+        android:elevation="5dp"
+        app:cornerRadius="2dp"
+        app:shadowColor="@color/colorPrimary"
+        app:backgroundColor="@color/colorPrimary"
+        app:shadowRadius="3dp"
+        android:layout_below="@id/line3">
+
+        <TextView
+            android:id="@+id/saveUserControlBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Сохранить"
+            android:textStyle="bold" />
+
+    </com.loopeer.shadow.ShadowView>
+
+</RelativeLayout>

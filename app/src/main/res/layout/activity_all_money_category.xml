@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AllMoneyCategoryActivity">
+
+    <include
+        layout="@layout/my_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/pieChartLayoutMoneyCategory">
+
+        <com.anychart.AnyChartView
+            android:id="@+id/any_chart_viewAllMoneyCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalSumAllMoneyCategory"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/pieChartLayoutMoneyCategory"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAllMoneyCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalSumAllMoneyCategory"/>
+
+    <ProgressBar
+        android:id="@+id/progress_barMoneyListMoneyCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"/>
+
+</RelativeLayout>

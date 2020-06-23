@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AllMoneyActivity">
+
+    <include
+        layout="@layout/my_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/pieChartLayout">
+
+        <com.anychart.AnyChartView
+            android:id="@+id/any_chart_viewAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalSumAllMoney"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/pieChartLayout"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAllMoney"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/totalSumAllMoney"/>
+
+    <ProgressBar
+        android:id="@+id/progress_barMoneyList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddMoneyActivity">
+
+    <include
+        layout="@layout/my_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/getTitleCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:gravity="center"
+                    android:text="Выберите категорию" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:id="@+id/titlePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Сумма"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/getTitlePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:gravity="center"
+                        android:textCursorDrawable="@android:color/black"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:id="@+id/titleRunMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Пробег"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/getTitleRunMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:gravity="center"
+                        android:textCursorDrawable="@android:color/black"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/getTitleYearMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:gravity="center"
+                    android:text="Выберите дату" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/titleCommentsMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Комментарии"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/getTitleCommentsMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:ems="10"
+                    android:gravity="center|top"
+                    android:inputType="textMultiLine"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:shadowMargin="5dp"
+                android:elevation="5dp"
+                app:cornerRadius="2dp"
+                app:shadowColor="@color/colorPrimary"
+                app:backgroundColor="@color/colorPrimary"
+                app:shadowRadius="3dp">
+
+                <TextView
+                    android:id="@+id/saveMoneyBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:text="Сохранить"
+                    android:textStyle="bold" />
+
+            </com.loopeer.shadow.ShadowView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
